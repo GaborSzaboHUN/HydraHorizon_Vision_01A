@@ -60,25 +60,28 @@ select {
 
 .main-wrapper.visionary-objective {
     position: relative;
-
     width: 100%;
-    height: 70svh;
+    height: 70vh;
+    /* You may adjust this height as needed */
     min-height: 620px;
-
     padding: 40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: url('assets/iswanto-arif-OJ74pFtrYi0-unsplash.jpg') center center / cover no-repeat fixed;
-
     perspective: 1000px;
     overflow: hidden;
-
     box-shadow: -8px 0px 20px 10px rgba(0, 0, 0, .55);
 }
 
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
 .main-wrapper.visionary-objective::before {
     content: '';
@@ -549,7 +552,7 @@ select {
 
 @media screen and (max-width: 450px) {
     .hydra-card.visionary-card {
-        padding: 20px 25px 30px;
+        padding: 20px;
     }
 
     .main-wrapper.visionary-objective.mobile {
@@ -565,7 +568,7 @@ select {
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
     .main-wrapper.visionary-objective .card-text {
         font-size: 12px;
         line-height: 20px;
